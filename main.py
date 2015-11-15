@@ -7,6 +7,7 @@ import random
 from enum import Enum
 import string
 from gooey import Gooey, GooeyParser
+import csv
 
 
 # All possible sample types in procedure.
@@ -187,8 +188,6 @@ class Trial:
         for idx in stimulus_nr:
             chain_of_figures.append(figures[idx])
 
-        print chain_of_figures
-
         relations_list = []
         for idx in range(0, self.n):
             stimulus_1 = chain_of_figures[idx]
@@ -213,9 +212,9 @@ class Trial:
         else:
             relations_list, task, answer = self.create_sample_figures()
 
-        relations_shuffled_list = self.shuffle_sample(relations_list)
+        self.shuffle_sample(relations_list)
 
-        return relations_shuffled_list, task, answer
+        return relations_list, task, answer
 
     def shuffle_sample(self, relations_list):
         """
@@ -304,7 +303,6 @@ class Trial:
         return task, answer
 
     def create_json(self):
-        # TODO: json
         trial = {
             'NR': self.nr,
             'MEMORY': self.memory,
@@ -319,27 +317,81 @@ class Trial:
             'ANSWER': self.answer
         }
 
-        return json.dumps(trial)
+        return trial
 
 
-@Gooey()
+class Trials:
+    def __init__(self, number_of_trials):
+        self.number_of_trials = number_of_trials
+        self.list_of_trials = []
+
+    def add_trial(self, trial_json):
+        if len(self.list_of_trials) < self.number_of_trials:
+            self.list_of_trials.append(trial_json)
+        else:
+            raise Exception('To many trials')
+
+    def save_to_csv(self):
+
+        with open('names.csv', 'w') as csvfile:
+            fieldnames = ['NR', 'MEMORY', 'INTEGR', 'TIME', 'MAXTIME', 'FEEDB',
+                          'WAIT', 'EXP', 'RELATIONS_LIST', 'TASK', 'ANSWER']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+            writer.writeheader()
+
+            for trial in self.list_of_trials:
+                writer.writerow({
+                    'NR': trial["NR"],
+                    'MEMORY': trial["MEMORY"],
+                    'INTEGR': trial['INTEGR'],
+                    'TIME': trial['TIME'],
+                    'MAXTIME': trial['MAXTIME'],
+                    'FEEDB': trial['FEEDB'],
+                    'WAIT': trial['WAIT'],
+                    'EXP': trial['EXP'],
+                    'RELATIONS_LIST': trial['RELATIONS_LIST'],
+                    'TASK': trial['TASK'],
+                    'ANSWER': trial['ANSWER']
+                })
+
+
+
+@Gooey(language='english',  # Translations configurable via json
+       default_size=(650, 600),   # starting size of the GUI
+       required_cols=1,           # number of columns in the "Required" section
+       optional_cols=3,           # number of columbs in the "Optional" section
+       )
+def generate_trials_gui():
+
+    parser = GooeyParser(description='Trial')
+    parser.add_argument('Number_of_trials', default=4,action='store', type = int, help='Number')
+    parser.add_argument("Random",default='True', choices = ['True', 'False'], help="Present trials in random order")
+
+    parser.add_argument('--Exp', default='Trial', choices = ['Experiment', 'Trial'], help = 'Choice')
+    parser.add_argument('--Task', default=SampleTypes.letters, choices=[SampleTypes.letters, SampleTypes.figures, SampleTypes.NamesAgeRelations, SampleTypes.NamesHeightRelations], help='Choose trial type')
+    parser.add_argument('--Number',default=1, action='store', type = int, help='Number of relations')
+    parser.add_argument('--Memory', default='True',choices = ['True', 'False'], help = 'Choice')
+    parser.add_argument('--Integration',default='True', choices = ['True', 'False'], help = 'Choice')
+    parser.add_argument('--Time',default=1, action='store', type = int, help='Number')
+    parser.add_argument('--Maxtime',default=1, action='store', type = int, help='Number')
+    parser.add_argument('--Feedback',default=1, action='store', type = int, help='Number')
+    parser.add_argument('--Wait',default=1, action='store', type = int, help='Number')
+
+    args = parser.parse_args()
+
+    trials = Trials(args.Number_of_trials)
+
+    for idx in range(0, args.Number_of_trials):
+        test = Trial(args.Task, args.Number, idx+1, args.Memory, args.Integration, args.Time, args.Maxtime, args.Feedback, args.Wait, args.Exp)
+        trials.add_trial(test.create_json())
+        print test.create_json()
+
+    trials.save_to_csv()
+
 def main():
 
-    parser = GooeyParser(description='Trials')
-
-    # Eventually make into checkboxes
-    parser.add_argument('Trial',
-                        action='store',
-                        widget='TextField',
-                        help='CPT Code')
-    args = parser.parse_args()
-    print args#, stored_args
-
-    k = 10
-    k_iterator = iter(range(0, k))
-    test = Trial(SampleTypes.letters, 3, k, 1, 1, 1, 1, 1, 1, 1)
-    print test.create_json()
-
+    generate_trials_gui()
 
 if __name__ == '__main__':
     main()
