@@ -17,7 +17,6 @@ def generate_trials_gui():
     parser = GooeyParser(description='Create_general_experiment')
     parser.add_argument('Number_of_training_trials', default=4, action='store', type=int, help='Number')
     parser.add_argument('Number_of_experiment_trials', default=4, action='store', type=int, help='Number')
-    parser.add_argument('Random', default='True', choices=['True', 'False'], help="Present trials in random order")
     parser.add_argument('File_name', default='experiment', type=str, help='Name of file with not personalized data')
 
     # Information about training
