@@ -4,6 +4,7 @@ __author__ = 'ociepkam'
 
 import csv
 import yaml
+import random
 
 
 class Trials:
@@ -24,6 +25,20 @@ class Trials:
             self.list_of_trials.append(trial_json)
         else:
             raise Exception('To many trials')
+
+    def randomize(self):
+        trainig_trials = []
+        experiment_trials = []
+        for trial in self.list_of_trials:
+            if trial['EXP']:
+                experiment_trials.append(trial)
+            else:
+                trainig_trials.append(trial)
+
+        random.shuffle(trainig_trials)
+        random.shuffle(experiment_trials)
+
+        self.list_of_trials = trainig_trials + experiment_trials
 
     def save_to_yaml(self, filename):
         with open(filename + '.yml', 'w') as yamlfile:
