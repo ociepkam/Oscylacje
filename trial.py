@@ -47,11 +47,24 @@ names = (
     {'name': 'Tomek', 'sex': 'M'},
     {'name': 'Lech', 'sex': 'M'},
     {'name': 'Jan', 'sex': 'M'},
-    {'name': 'Zygmunt', 'sex': 'M'},
+    {'name': 'Roch', 'sex': 'M'},
+    {'name': 'Piotr', 'sex': 'M'},
+    {'name': 'Adam', 'sex': 'M'},
+    {'name': 'Filip', 'sex': 'M'},
+    {'name': 'Igor', 'sex': 'M'},
+    {'name': 'Jacek', 'sex': 'M'},
+    {'name': 'Wit', 'sex': 'M'},
+
     {'name': 'Ewa', 'sex': 'F'},
     {'name': 'Anna', 'sex': 'F'},
-    {'name': 'Monika', 'sex': 'F'},
+    {'name': 'Iga', 'sex': 'F'},
     {'name': 'Magda', 'sex': 'F'},
+    {'name': 'Ada', 'sex': 'F'},
+    {'name': 'Ola', 'sex': 'F'},
+    {'name': 'Łucja', 'sex': 'F'},
+    {'name': 'Maja', 'sex': 'F'},
+    {'name': 'Klara', 'sex': 'F'},
+    {'name': 'Ida', 'sex': 'F'},
 )
 
 # List of stimulus for letters samples. Only consonants letters.
@@ -322,21 +335,9 @@ class Trial:
         return trial
 
     def create_concrete_trial_json(self):
-        trial = {
-            'SAMPLE_TYPE': self.sample_type,
-            'N': self.n,
-            'NR': self.nr,
-            'MEMORY': self.memory,
-            'INTEGR': self.integr,
-            'TIME': self.time,
-            'MAXTIME': self.maxtime,
-            'FEEDB': self.feedb,
-            'WAIT': self.wait,
-            'EXP': self.exp,
-            'RELATIONS_LIST': self.relations_list,
-            'TASK': self.task,
-            'ANSWER': self.answer,
-            'FIXTIME': self.fixtime
-        }
+        trial = self.create_general_trial_json()
+        trial['RELATIONS_LIST'] = self.relations_list
+        trial['TASK'] = self.task
+        trial['ANSWER'] = self.answer
 
         return trial
