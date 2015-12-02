@@ -9,7 +9,7 @@ from trials import Trials
 
 
 @Gooey(language='english',  # Translations configurable via json
-       default_size=(450, 400),  # starting size of the GUI
+       default_size=(450, 500),  # starting size of the GUI
        required_cols=1,  # number of columns in the "Required" section
        optional_cols=3,  # number of columns in the "Optional" section
        )
@@ -17,6 +17,7 @@ def main():
     parser = GooeyParser(description='Create_concrete_experiment')
     parser.add_argument('Experiment_file_name', widget='FileChooser', help='Choose experiment file with general info')
     parser.add_argument('Participant_code', type=str, help='Name of file with personalized data')
+    parser.add_argument('Random', default='True', choices=['True', 'False'], help="Present trials in random order")
     args = parser.parse_args()
 
     with open(args.Experiment_file_name, 'r') as experimentfile:
@@ -32,6 +33,8 @@ def main():
         trial.create_sample()
         trials.add_concrete_trial(trial)
 
+    if args.Random:
+        trials.randomize()
     trials.save_to_yaml(args.Participant_code)
 
 if __name__ == '__main__':
