@@ -1,17 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__author__ = 'lab'
+__author__ = 'ociepkam'
 
-import json
+# All possible sample types in procedure.
+
 import random
 from enum import Enum
 import string
-from gooey import Gooey, GooeyParser
-import csv
-import yaml
 
 
-# All possible sample types in procedure.
 class SampleTypes(Enum):
     letters = 'letters'
     figures = 'figures'
@@ -50,11 +47,24 @@ names = (
     {'name': 'Tomek', 'sex': 'M'},
     {'name': 'Lech', 'sex': 'M'},
     {'name': 'Jan', 'sex': 'M'},
-    {'name': 'Zygmunt', 'sex': 'M'},
+    {'name': 'Roch', 'sex': 'M'},
+    {'name': 'Piotr', 'sex': 'M'},
+    {'name': 'Adam', 'sex': 'M'},
+    {'name': 'Filip', 'sex': 'M'},
+    {'name': 'Igor', 'sex': 'M'},
+    {'name': 'Jacek', 'sex': 'M'},
+    {'name': 'Wit', 'sex': 'M'},
+
     {'name': 'Ewa', 'sex': 'F'},
     {'name': 'Anna', 'sex': 'F'},
-    {'name': 'Monika', 'sex': 'F'},
+    {'name': 'Iga', 'sex': 'F'},
     {'name': 'Magda', 'sex': 'F'},
+    {'name': 'Ada', 'sex': 'F'},
+    {'name': 'Ola', 'sex': 'F'},
+    {'name': 'Łucja', 'sex': 'F'},
+    {'name': 'Maja', 'sex': 'F'},
+    {'name': 'Klara', 'sex': 'F'},
+    {'name': 'Ida', 'sex': 'F'},
 )
 
 # List of stimulus for letters samples. Only consonants letters.
@@ -100,16 +110,17 @@ class Trial:
         self.sample_type = sample_type
         self.n = n
         self.nr = nr
-        self.memory = memory
-        self.integr = integr
+        self.memory = bool(memory)
+        self.integr = bool(integr)
         self.time = time
         self.maxtime = maxtime
         self.feedb = feedb
         self.wait = wait
         self.exp = exp
         self.fixtime = fixtime
-
-        self.relations_list, self.task, self.answer = self.create_sample()
+        self.relations_list = None
+        self.task = None
+        self.answer = None
 
     def create_sample_letters(self):
         """
@@ -215,7 +226,10 @@ class Trial:
             relations_list, task, [answer] = self.create_sample_figures()
 
         self.shuffle_sample(relations_list)
-        return relations_list, task, answer
+
+        self.relations_list = relations_list
+        self.task = task
+        self.answer = answer
 
     def shuffle_sample(self, relations_list):
         """
@@ -303,8 +317,10 @@ class Trial:
 
         return task, answer
 
-    def create_json(self):
+    def create_general_trial_json(self):
         trial = {
+            'SAMPLE_TYPE': self.sample_type,
+            'N': self.n,
             'NR': self.nr,
             'MEMORY': self.memory,
             'INTEGR': self.integr,
@@ -313,118 +329,15 @@ class Trial:
             'FEEDB': self.feedb,
             'WAIT': self.wait,
             'EXP': self.exp,
-            'RELATIONS_LIST': self.relations_list,
-            'TASK': self.task,
-            'ANSWER': self.answer,
             'FIXTIME': self.fixtime
         }
 
         return trial
 
+    def create_concrete_trial_json(self):
+        trial = self.create_general_trial_json()
+        trial['RELATIONS_LIST'] = self.relations_list
+        trial['TASK'] = self.task
+        trial['ANSWER'] = self.answer
 
-class Trials:
-    def __init__(self, number_of_trials):
-        self.number_of_trials = number_of_trials
-        self.list_of_trials = []
-
-    def add_trial(self, trial_json):
-        if len(self.list_of_trials) < self.number_of_trials:
-            self.list_of_trials.append(trial_json)
-        else:
-            raise Exception('To many trials')
-
-    def save_to_yaml(self, filename):
-        with open(filename + '.yml', 'w') as yamlfile:
-            yamlfile.write(yaml.dump(self.list_of_trials))
-
-    def save_to_csv(self, filename):
-        with open(filename + '.csv', 'w') as csvfile:
-            fieldnames = ['NR', 'MEMORY', 'INTEGR', 'TIME', 'MAXTIME', 'FEEDB',
-                          'WAIT', 'EXP', 'RELATIONS_LIST', 'TASK', 'ANSWER']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-            writer.writeheader()
-
-            for trial in self.list_of_trials:
-                writer.writerow({
-                    'NR': trial["NR"],
-                    'MEMORY': trial["MEMORY"],
-                    'INTEGR': trial['INTEGR'],
-                    'TIME': trial['TIME'],
-                    'MAXTIME': trial['MAXTIME'],
-                    'FEEDB': trial['FEEDB'],
-                    'WAIT': trial['WAIT'],
-                    'EXP': trial['EXP'],
-                    'RELATIONS_LIST': trial['RELATIONS_LIST'],
-                    'TASK': trial['TASK'],
-                    'ANSWER': trial['ANSWER']
-                })
-
-
-@Gooey(language='english',  # Translations configurable via json
-       default_size=(650, 600),  # starting size of the GUI
-       required_cols=1,  # number of columns in the "Required" section
-       optional_cols=3,  # number of columns in the "Optional" section
-       )
-def generate_trials_gui():
-    # General information
-    parser = GooeyParser(description='Trial')
-    parser.add_argument('Number_of_training_trials', default=4, action='store', type=int, help='Number')
-    parser.add_argument('Number_of_experiment_trials', default=4, action='store', type=int, help='Number')
-    parser.add_argument('Random', default='True', choices=['True', 'False'], help="Present trials in random order")
-    parser.add_argument('File_name', default='experiment', type=str, help='Name of file with not personalized data')
-
-    # Information about training
-    parser.add_argument('--Training_task', default=SampleTypes.letters,
-                        choices=[SampleTypes.letters, SampleTypes.figures, SampleTypes.NamesAgeRelations,
-                                 SampleTypes.NamesHeightRelations], help='Choose trial type')
-    parser.add_argument('--Training_number', default=1, action='store', type=int, help='Number of relations')
-    parser.add_argument('--Training_memory', default='True', choices=['True', 'False'], help='Choice')
-    parser.add_argument('--Training_integration', default='True', choices=['True', 'False'], help='Choice')
-    parser.add_argument('--Training_time', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Training_maxtime', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Training_feedback', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Training_wait', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Training_fixtime', default=1, action='store', type=int, help='Number')
-
-    # Information about experiment
-    parser.add_argument('--Experiment_task', default=SampleTypes.letters,
-                        choices=[SampleTypes.letters, SampleTypes.figures, SampleTypes.NamesAgeRelations,
-                                 SampleTypes.NamesHeightRelations], help='Choose trial type')
-    parser.add_argument('--Experiment_number', default=1, action='store', type=int, help='Number of relations')
-    parser.add_argument('--Experiment_memory', default='True', choices=['True', 'False'], help='Choice')
-    parser.add_argument('--Experiment_integration', default='True', choices=['True', 'False'], help='Choice')
-    parser.add_argument('--Experiment_time', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Experiment_maxtime', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Experiment_feedback', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Experiment_wait', default=1, action='store', type=int, help='Number')
-    parser.add_argument('--Experiment_fixtime', default=1, action='store', type=int, help='Number')
-
-    args = parser.parse_args()
-
-    number_of_trials = args.Number_of_training_trials + args.Number_of_experiment_trials
-
-    trials = Trials(number_of_trials)
-
-    for idx in range(0, args.Number_of_training_trials):
-        trial = Trial(args.Training_task, args.Training_number, idx + 1, args.Training_memory,
-                      args.Training_integration, args.Training_time, args.Training_maxtime, args.Training_feedback,
-                      args.Training_wait, False, args.Training_fixtime)
-        trials.add_trial(trial.create_json())
-        print trial.create_json()
-    for idx in range(0, args.Number_of_experiment_trials):
-        trial = Trial(args.Experiment_task, args.Experiment_number, idx + 1, args.Experiment_memory,
-                      args.Experiment_integration, args.Experiment_time, args.Experiment_maxtime,
-                      args.Experiment_feedback, args.Experiment_wait, True, args.Experiment_fixtime)
-        trials.add_trial(trial.create_json())
-        print trial.create_json()
-
-    trials.save_to_yaml(args.File_name)
-
-
-def main():
-    generate_trials_gui()
-
-
-if __name__ == '__main__':
-    main()
+        return trial
