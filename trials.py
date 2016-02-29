@@ -43,26 +43,3 @@ class Trials:
     def save_to_yaml(self, filename):
         with open(filename + '.yml', 'w') as yamlfile:
             yamlfile.write(yaml.dump(self.list_of_trials))
-
-    def save_to_csv(self, filename):
-        with open(filename + '.csv', 'w') as csvfile:
-            fieldnames = ['NR', 'MEMORY', 'INTEGR', 'TIME', 'MAXTIME', 'FEEDB',
-                          'WAIT', 'EXP', 'RELATIONS_LIST', 'TASK', 'ANSWER']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-            writer.writeheader()
-
-            for trial in self.list_of_trials:
-                writer.writerow({
-                    'NR': trial["NR"],
-                    'MEMORY': trial["MEMORY"],
-                    'INTEGR': trial['INTEGR'],
-                    'TIME': trial['TIME'],
-                    'MAXTIME': trial['MAXTIME'],
-                    'FEEDB': trial['FEEDB'],
-                    'WAIT': trial['WAIT'],
-                    'EXP': trial['EXP'],
-                    'RELATIONS_LIST': trial['RELATIONS_LIST'],
-                    'TASK': trial['TASK'],
-                    'ANSWER': trial['ANSWER']
-                })
