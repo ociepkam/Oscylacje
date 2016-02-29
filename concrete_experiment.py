@@ -29,7 +29,7 @@ def main():
         trial_info = experiment[idx]
         trial = Trial(trial_info['SAMPLE_TYPE'], trial_info['N'], trial_info['NR'], trial_info['MEMORY'],
                       trial_info['INTEGR'], trial_info['TIME'], trial_info['MAXTIME'], trial_info['FEEDB'],
-                      trial_info['WAIT'], trial_info['EXP'], trial_info['FIXTIME'])
+                      trial_info['WAIT'], trial_info['EXP'], trial_info['FIXTIME'], trial_info['EEG'])
         trial.create_sample()
         trials.add_concrete_trial(trial)
 
