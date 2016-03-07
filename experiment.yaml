@@ -1,0 +1,16 @@
+- {EEG: 'True', EXP: false, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 1, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}
+- {EEG: 'True', EXP: false, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 2, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}
+- {EEG: 'True', EXP: false, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 3, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}
+- {EEG: 'True', EXP: false, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 4, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}
+- {EEG: 'True', EXP: true, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 1, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}
+- {EEG: 'True', EXP: true, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 2, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}
+- {EEG: 'True', EXP: true, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 3, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}
+- {EEG: 'True', EXP: true, FEEDB: 1, FIXTIME: 1, INTEGR: true, LIST: '1', MAXTIME: 1,
+  MEMORY: true, N: 1, NR: 4, SAMPLE_TYPE: letters, TIME: 1, WAIT: 1}

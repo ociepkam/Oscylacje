@@ -83,7 +83,7 @@ figures = (
 
 
 class Trial:
-    def __init__(self, sample_type, n, nr, memory, integr, time, maxtime, feedb, wait, exp, fixtime, eeg):
+    def __init__(self, sample_type, n, nr, memory, integr, time, maxtime, feedb, wait, exp, fixtime, eeg, view_list):
         """
         :param sample_type: kind of stimulus. All possibilities in SampleTypes class.
         :param n: number of relations in trial. n+1 number od elements in relation chain
@@ -122,6 +122,7 @@ class Trial:
         self.task = None
         self.answer = None
         self.eeg = eeg
+        self.view_list = view_list
 
     def create_sample_letters(self):
         """
@@ -331,7 +332,8 @@ class Trial:
             'WAIT': self.wait,
             'EXP': self.exp,
             'FIXTIME': self.fixtime,
-            'EEG': self.eeg
+            'EEG': self.eeg,
+            'LIST': self.view_list
         }
 
         return trial

@@ -41,5 +41,5 @@ class Trials:
         self.list_of_trials = trainig_trials + experiment_trials
 
     def save_to_yaml(self, filename):
-        with open(filename + '.yml', 'w') as yamlfile:
+        with open(filename + '.yaml', 'w') as yamlfile:
             yamlfile.write(yaml.dump(self.list_of_trials))
