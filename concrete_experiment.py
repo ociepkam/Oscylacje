@@ -28,14 +28,16 @@ def main():
     for idx in range(0, len(experiment)):
         trial_info = experiment[idx]
         trial = Trial(trial_info['SAMPLE_TYPE'], trial_info['N'], trial_info['NR'], trial_info['MEMORY'],
-                      trial_info['INTEGR'], trial_info['TIME'], trial_info['MAXTIME'], trial_info['FEEDB'],
-                      trial_info['WAIT'], trial_info['EXP'], trial_info['FIXTIME'], trial_info['EEG'], trial_info['LIST'])
+                      trial_info['INTEGR'], trial_info['SHOW_TIME'], trial_info['RESP_TIME'], trial_info['MAXTIME'],
+                      trial_info['FEEDB'], trial_info['FEEDB_TIME'], trial_info['WAIT'], trial_info['EXP'],
+                      trial_info['FIXTIME'], trial_info['EEG'], trial_info['LIST'])
         trial.create_sample()
         trials.add_concrete_trial(trial)
 
     if args.Random:
         trials.randomize()
     trials.save_to_yaml(args.Participant_code)
+
 
 if __name__ == '__main__':
     main()

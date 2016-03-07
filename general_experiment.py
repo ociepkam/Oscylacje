@@ -27,9 +27,11 @@ def generate_trials_gui():
     parser.add_argument('--Training_number', default=1, action='store', type=int, help='Number of relations')
     parser.add_argument('--Training_memory', default='True', choices=['True', 'False'], help='Choice')
     parser.add_argument('--Training_integration', default='True', choices=['True', 'False'], help='Choice')
-    parser.add_argument('--Training_time', default=1, action='store', type=int, help='Number')
+    parser.add_argument('--Training_show_time', default=1, action='store', type=int, help='Number')
+    parser.add_argument('--Training_resp_time', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Training_maxtime', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Training_feedback', default=1, action='store', type=int, help='Number')
+    parser.add_argument('--Training_feedback_time', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Training_wait', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Training_fixtime', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Training_list', default='1', choices=['1', '0'], help='Choose view type')
@@ -41,9 +43,11 @@ def generate_trials_gui():
     parser.add_argument('--Experiment_number', default=1, action='store', type=int, help='Number of relations')
     parser.add_argument('--Experiment_memory', default='True', choices=['True', 'False'], help='Choice')
     parser.add_argument('--Experiment_integration', default='True', choices=['True', 'False'], help='Choice')
-    parser.add_argument('--Experiment_time', default=1, action='store', type=int, help='Number')
+    parser.add_argument('--Experiment_show_time', default=1, action='store', type=int, help='Number')
+    parser.add_argument('--Experiment_resp_time', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Experiment_maxtime', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Experiment_feedback', default=1, action='store', type=int, help='Number')
+    parser.add_argument('--Experiment_feedback_time', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Experiment_wait', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Experiment_fixtime', default=1, action='store', type=int, help='Number')
     parser.add_argument('--Experiment_list', default='1', choices=['1', '0'], help='Choose view type')
@@ -56,14 +60,15 @@ def generate_trials_gui():
 
     for idx in range(0, args.Number_of_training_trials):
         trial = Trial(args.Training_task, args.Training_number, idx + 1, args.Training_memory,
-                      args.Training_integration, args.Training_time, args.Training_maxtime, args.Training_feedback,
+                      args.Training_integration, args.Training_show_time, args.Training_resp_time,
+                      args.Training_maxtime, args.Training_feedback, args.Training_feedback_time,
                       args.Training_wait, False, args.Training_fixtime, args.EEG_connected, args.Training_list)
         trials.add_general_trial(trial)
     for idx in range(0, args.Number_of_experiment_trials):
         trial = Trial(args.Experiment_task, args.Experiment_number, idx + 1, args.Experiment_memory,
-                      args.Experiment_integration, args.Experiment_time, args.Experiment_maxtime,
-                      args.Experiment_feedback, args.Experiment_wait, True, args.Experiment_fixtime, args.EEG_connected,
-                      args.Experiment_list)
+                      args.Experiment_integration, args.Experiment_show_time, args.Experiment_resp_time,
+                      args.Experiment_maxtime, args.Experiment_feedback, args.Experiment_feedback_time,
+                      args.Experiment_wait, True, args.Experiment_fixtime, args.EEG_connected, args.Experiment_list)
         trials.add_general_trial(trial)
 
     trials.save_to_yaml(args.File_name)

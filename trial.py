@@ -83,7 +83,7 @@ figures = (
 
 
 class Trial:
-    def __init__(self, sample_type, n, nr, memory, integr, time, maxtime, feedb, wait, exp, fixtime, eeg, view_list):
+    def __init__(self, sample_type, n, nr, memory, integr, show_time, resp_time, maxtime, feedb, feedb_time, wait, exp, fixtime, eeg, view_list):
         """
         :param sample_type: kind of stimulus. All possibilities in SampleTypes class.
         :param n: number of relations in trial. n+1 number od elements in relation chain
@@ -112,9 +112,11 @@ class Trial:
         self.nr = nr
         self.memory = bool(memory)
         self.integr = bool(integr)
-        self.time = time
+        self.show_time = show_time
+        self.resp_time = resp_time
         self.maxtime = maxtime
         self.feedb = feedb
+        self.feedb_time = feedb_time
         self.wait = wait
         self.exp = exp
         self.fixtime = fixtime
@@ -326,9 +328,11 @@ class Trial:
             'NR': self.nr,
             'MEMORY': self.memory,
             'INTEGR': self.integr,
-            'TIME': self.time,
+            'SHOW_TIME': self.show_time,
+            'RESP_TIME': self.resp_time,
             'MAXTIME': self.maxtime,
             'FEEDB': self.feedb,
+            'FEEDB_TIME': self.feedb_time,
             'WAIT': self.wait,
             'EXP': self.exp,
             'FIXTIME': self.fixtime,
