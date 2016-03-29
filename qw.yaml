@@ -1,0 +1,328 @@
+- ANSWER: [D<G]
+  EEG: 1
+  EXP: 0
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 10
+  MEMORY: 1
+  N: 3
+  NR: 5
+  RELATIONS_LIST: [C>F, C<D, G>D]
+  RESP_TIME: 10
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 10
+  TASK: [G<D, D<G]
+  WAIT: 1
+- ANSWER: [G<K]
+  EEG: 1
+  EXP: 0
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 10
+  MEMORY: 1
+  N: 3
+  NR: 7
+  RELATIONS_LIST: [J<G, K>G, K<C]
+  RESP_TIME: 10
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 10
+  TASK: [G<K, K<G]
+  WAIT: 1
+- ANSWER: [H<B]
+  EEG: 1
+  EXP: 0
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 10
+  MEMORY: 1
+  N: 3
+  NR: 6
+  RELATIONS_LIST: [F<J, J<H, H<B]
+  RESP_TIME: 10
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 10
+  TASK: [B<H, H<B]
+  WAIT: 1
+- ANSWER: [H<K]
+  EEG: 1
+  EXP: 0
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 10
+  MEMORY: 1
+  N: 3
+  NR: 2
+  RELATIONS_LIST: [B<J, H>J, H<K]
+  RESP_TIME: 10
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 10
+  TASK: [H<K, K<H]
+  WAIT: 1
+- ANSWER: [B<J]
+  EEG: 1
+  EXP: 0
+  FEEDB: 1
+  FEEDB_TIME: 1
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 1
+  MEMORY: 1
+  N: 3
+  NR: 1
+  RELATIONS_LIST: [F<C, C<B, B<J]
+  RESP_TIME: 1
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 1
+  TASK: [B<J, J<B]
+  WAIT: 1
+- ANSWER: [B<C]
+  EEG: 1
+  EXP: 0
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 10
+  MEMORY: 1
+  N: 3
+  NR: 3
+  RELATIONS_LIST: [K<B, C>B, C<F]
+  RESP_TIME: 10
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 10
+  TASK: [B<C, C<B]
+  WAIT: 1
+- ANSWER: [F<C]
+  EEG: 1
+  EXP: 0
+  FEEDB: 0
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 10
+  MEMORY: 1
+  N: 3
+  NR: 8
+  RELATIONS_LIST: [F>K, F<C, G>C]
+  RESP_TIME: 10
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 10
+  TASK: [F<C, C<F]
+  WAIT: 1
+- ANSWER: [K<D]
+  EEG: 1
+  EXP: 0
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 0
+  MAXTIME: 10
+  MEMORY: 1
+  N: 3
+  NR: 4
+  RELATIONS_LIST: [D>K, D<G, G<C]
+  RESP_TIME: 10
+  SAMPLE_TYPE: letters
+  SHOW_TIME: 10
+  TASK: [K<D, D<K]
+  WAIT: 1
+- ANSWER: &id001 [trapeze, diamond]
+  EEG: 1
+  EXP: 1
+  FEEDB: 0
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 10
+  MEMORY: 1
+  N: 2
+  NR: 4
+  RELATIONS_LIST:
+  - [trapeze, diamond]
+  - [diamond, ellipse]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - [diamond, trapeze]
+  - *id001
+  WAIT: 0
+- ANSWER: &id002 [rectangle, triangle]
+  EEG: 1
+  EXP: 1
+  FEEDB: 0
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 10
+  MEMORY: 1
+  N: 4
+  NR: 1
+  RELATIONS_LIST:
+  - [ellipse, circle]
+  - [circle, hexagon]
+  - [hexagon, rectangle]
+  - [rectangle, triangle]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - *id002
+  - [triangle, rectangle]
+  WAIT: 0
+- ANSWER: &id003 [ellipse, circle]
+  EEG: 1
+  EXP: 1
+  FEEDB: 0
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 10
+  MEMORY: 1
+  N: 4
+  NR: 2
+  RELATIONS_LIST:
+  - [diamond, rectangle]
+  - [rectangle, ellipse]
+  - [ellipse, circle]
+  - [circle, triangle]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - [circle, ellipse]
+  - *id003
+  WAIT: 0
+- ANSWER: &id004 [circle, diamond]
+  EEG: 1
+  EXP: 1
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 10
+  MEMORY: 1
+  N: 2
+  NR: 7
+  RELATIONS_LIST:
+  - [circle, diamond]
+  - [diamond, hexagon]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - [diamond, circle]
+  - *id004
+  WAIT: 0
+- ANSWER: &id005 [rectangle, trapeze]
+  EEG: 1
+  EXP: 1
+  FEEDB: 0
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 10
+  MEMORY: 1
+  N: 2
+  NR: 5
+  RELATIONS_LIST:
+  - [diamond, rectangle]
+  - [rectangle, trapeze]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - *id005
+  - [trapeze, rectangle]
+  WAIT: 0
+- ANSWER: &id006 [ellipse, trapeze]
+  EEG: 1
+  EXP: 1
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 5
+  MEMORY: 1
+  N: 4
+  NR: 8
+  RELATIONS_LIST:
+  - [diamond, triangle]
+  - [triangle, rectangle]
+  - [rectangle, ellipse]
+  - [ellipse, trapeze]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - *id006
+  - [trapeze, ellipse]
+  WAIT: 0
+- ANSWER: &id007 [circle, triangle]
+  EEG: 1
+  EXP: 1
+  FEEDB: 1
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 10
+  MEMORY: 1
+  N: 2
+  NR: 6
+  RELATIONS_LIST:
+  - [rectangle, circle]
+  - [circle, triangle]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - [triangle, circle]
+  - *id007
+  WAIT: 0
+- ANSWER: &id008 [diamond, hexagon]
+  EEG: 1
+  EXP: 1
+  FEEDB: 0
+  FEEDB_TIME: 10
+  FIXTIME: 10
+  INTEGR: 0
+  LIST_VIEW: 1
+  MAXTIME: 10
+  MEMORY: 1
+  N: 4
+  NR: 3
+  RELATIONS_LIST:
+  - [trapeze, circle]
+  - [circle, square]
+  - [square, diamond]
+  - [diamond, hexagon]
+  RESP_TIME: 10
+  SAMPLE_TYPE: figures
+  SHOW_TIME: 10
+  TASK:
+  - *id008
+  - [hexagon, diamond]
+  WAIT: 0

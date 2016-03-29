@@ -89,11 +89,11 @@ class Trial:
         :param n: number of relations in trial. n+1 number od elements in relation chain
         :param nr: Trial index. Different for each Trial.
         :param memory:
-            (memory == True) => Participant can't see stimulus when answering.
-            (memory == False) => Participant see all stimulus from Trial when answering.
+            (memory == 1) => Participant can't see stimulus when answering.
+            (memory == 0) => Participant see all stimulus from Trial when answering.
         :param integr:
-            (integr == True) => Question contain first and last element from relation chain.
-            (integr == True) => Question contain two random element from relation chain.
+            (integr == 1) => Question contain first and last element from relation chain.
+            (integr == 0) => Question contain two random element from relation chain.
                                 This element have to be neighbors.
         :param time: how long participant can see each relations.
         :param maxtime: time for answer.
@@ -103,28 +103,34 @@ class Trial:
             2 - doesn't show result for this Trial but show percent result at the end of test.
         :param wait: break time after Trial. 0 - wait until participant doesn't press button.
         :param exp:
-            (exp == True) => Experiment Trial.
-            (exp == False) => Test Trail.
+            (exp == 1) => Experiment Trial.
+            (exp == 0) => Test Trail.
+        :param eeg:
+            (eeg == 1) => EEG is connected.
+            (eeg == 0) => EEG isn't connected.
+        :param view_list:
+            (view_list == 1) => Relation under relation - for tablets.
+            (view_list == 0) => All relations shown at the same place.
         :return:
         """
         self.sample_type = sample_type
         self.n = n
         self.nr = nr
-        self.memory = bool(memory)
-        self.integr = bool(integr)
+        self.memory = int(memory)
+        self.integr = int(integr)
         self.show_time = show_time
         self.resp_time = resp_time
         self.maxtime = maxtime
         self.feedb = feedb
         self.feedb_time = feedb_time
         self.wait = wait
-        self.exp = exp
+        self.exp = int(exp)
         self.fixtime = fixtime
         self.relations_list = None
         self.task = None
         self.answer = None
-        self.eeg = eeg
-        self.view_list = view_list
+        self.eeg = int(eeg)
+        self.view_list = int(view_list)
 
     def create_sample_letters(self):
         """
@@ -282,7 +288,7 @@ class Trial:
             second = self.n
         # Task conclude random pair of neighbors.
         else:
-            first = random.randint(0, self.n)
+            first = random.randint(0, self.n - 1)
             second = first + 1
 
         # Creating task and answer
@@ -337,7 +343,7 @@ class Trial:
             'EXP': self.exp,
             'FIXTIME': self.fixtime,
             'EEG': self.eeg,
-            'LIST': self.view_list
+            'LIST_VIEW': self.view_list
         }
 
         return trial

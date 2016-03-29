@@ -1,11 +1,32 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__author__ = 'ociepkam'
 
 from gooey import Gooey, GooeyParser
-import yaml
-from trial import Trial, SampleTypes
+from trial import Trial
 from trials import Trials
+from openpyxl import load_workbook
+
+__author__ = 'ociepkam'
+
+
+def load_info(filename):
+    experiment_file = load_workbook(filename)
+    sheet = experiment_file.get_active_sheet()
+
+    experiment = []
+    for row_idx in range(len(sheet.columns[0]) - 1):
+        trial = {}
+        for column_idx, column in enumerate(sheet.columns):
+            if column_idx == 15:
+                break
+            if isinstance(column[row_idx + 1].value, (str, unicode)):
+                trial.update({str(column[0].value): str(column[row_idx + 1].value)})
+            else:
+                trial.update({str(column[0].value): int(column[row_idx + 1].value)})
+
+        experiment.append(trial)
+
+    return experiment
 
 
 @Gooey(language='english',  # Translations configurable via json
@@ -20,8 +41,7 @@ def main():
     parser.add_argument('Random', default='True', choices=['True', 'False'], help="Present trials in random order")
     args = parser.parse_args()
 
-    with open(args.Experiment_file_name, 'r') as experimentfile:
-        experiment = yaml.load(experimentfile)
+    experiment = load_info(args.Experiment_file_name)
 
     trials = Trials(len(experiment))
 
@@ -30,7 +50,7 @@ def main():
         trial = Trial(trial_info['SAMPLE_TYPE'], trial_info['N'], trial_info['NR'], trial_info['MEMORY'],
                       trial_info['INTEGR'], trial_info['SHOW_TIME'], trial_info['RESP_TIME'], trial_info['MAXTIME'],
                       trial_info['FEEDB'], trial_info['FEEDB_TIME'], trial_info['WAIT'], trial_info['EXP'],
-                      trial_info['FIXTIME'], trial_info['EEG'], trial_info['LIST'])
+                      trial_info['FIXTIME'], trial_info['EEG'], trial_info['LIST_VIEW'])
         trial.create_sample()
         trials.add_concrete_trial(trial)
 
