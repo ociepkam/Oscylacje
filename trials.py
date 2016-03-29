@@ -8,8 +8,6 @@ import random
 from openpyxl import Workbook
 
 
-#"=JEŻELI(I(LUB(A{0} =\"letters\";A{0} =\"figures\";A{0} =\"NamesHeightRelations\"; A{0} =\"NamesAgeRelations\");LUB(B{0} = 2;B{0} = 3;B{0} = 4);LUB(D{0} = 0;D{0} = 1);LUB(E{0} = 0;E{0} = 1);LUB(I{0} = 0;I{0} = 1);LUB(K{0} = 0;K{0} = 1);LUB(L{0} = 0;L{0} = 1);LUB(N{0} = 0;N{0} = 1);LUB(O{0} = 0;O{0} = 1)))"
-
 class Trials:
     def __init__(self, number_of_trials):
         self.number_of_trials = number_of_trials
@@ -48,7 +46,6 @@ class Trials:
             yamlfile.write(yaml.dump(self.list_of_trials))
 
     def save_to_xlsx(self, filename):
-
         veryfication = "=IF(AND(OR(A{0} =\"letters\",A{0} =\"figures\",A{0} =\"NamesHeightRelations\", A{0} =\"NamesAgeRelations\"),OR(B{0} = 2,B{0} = 3,B{0} = 4),OR(D{0} = 0,D{0} = 1),OR(E{0} = 0,E{0} = 1),OR(I{0} = 0,I{0} = 1),OR(K{0} = 0,K{0} = 1),OR(L{0} = 0,L{0} = 1),OR(N{0} = 0,N{0} = 1),OR(O{0} = 0,O{0} = 1)),1, 0)"
         global_veryfication = "=SUM(Q2: Q{0})".format(len(self.list_of_trials)+1)
 
@@ -56,7 +53,6 @@ class Trials:
 
         # grab the active worksheet
         ws = wb.active
-
 
         # Data can be assigned directly to cells
         ws.append(
