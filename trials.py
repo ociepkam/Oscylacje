@@ -47,7 +47,7 @@ class Trials:
 
     def save_to_xlsx(self, filename):
         veryfication = "=IF(AND(OR(A{0} =\"letters\",A{0} =\"figures\",A{0} =\"NamesHeightRelations\", A{0} =\"NamesAgeRelations\"),OR(B{0} = 2,B{0} = 3,B{0} = 4),OR(D{0} = 0,D{0} = 1),OR(E{0} = 0,E{0} = 1),OR(I{0} = 0,I{0} = 1),OR(K{0} = 0,K{0} = 1),OR(L{0} = 0,L{0} = 1),OR(N{0} = 0,N{0} = 1),OR(O{0} = 0,O{0} = 1)),1, 0)"
-        global_veryfication = "=SUM(Q2: Q500)".format(len(self.list_of_trials)+1)
+        global_veryfication = "=SUM(Q2: Q500)"
 
         wb = Workbook()
 
