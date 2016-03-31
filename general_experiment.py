@@ -3,8 +3,9 @@
 __author__ = 'ociepkam'
 
 from gooey import Gooey, GooeyParser
-from trial import Trial, SampleTypes
-from trials import Trials
+
+from classes.trial import Trial, SampleTypes
+from classes.trials import Trials
 
 
 @Gooey(language='english',  # Translations configurable via json

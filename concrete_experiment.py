@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from gooey import Gooey, GooeyParser
-from trial import Trial
-from trials import Trials
 from openpyxl import load_workbook
+
+from classes.trial import Trial
+from classes.trials import Trials
 
 __author__ = 'ociepkam'
 
