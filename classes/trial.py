@@ -131,6 +131,7 @@ class Trial:
         self.answer = None
         self.eeg = int(eeg)
         self.view_list = int(view_list)
+        self.type = 'trial'
 
     def create_sample_letters(self):
         """
@@ -327,8 +328,9 @@ class Trial:
 
         return task, answer
 
-    def create_general_trial_json(self):
+    def prepare_general(self):
         trial = {
+            "TYPE": self.type,
             'SAMPLE_TYPE': self.sample_type,
             'N': self.n,
             'NR': self.nr,
@@ -348,8 +350,8 @@ class Trial:
 
         return trial
 
-    def create_concrete_trial_json(self):
-        trial = self.create_general_trial_json()
+    def prepare_concrete(self):
+        trial = self.prepare_general()
         trial['RELATIONS_LIST'] = self.relations_list
         trial['TASK'] = self.task
         trial['ANSWER'] = self.answer
