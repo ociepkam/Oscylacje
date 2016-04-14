@@ -1,0 +1,310 @@
+LIST_OF_BLOCKS:
+- experiment_elements:
+  - {INSTRUCTION_TYPE: text, PATH: instrukcja.txt, TIME: 5, TYPE: instruction}
+  - ANSWER: B<H
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 3
+    RELATIONS_LIST: [H>B]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [B<H, H<B]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: C<B
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 2
+    RELATIONS_LIST: [B>C]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [C<B, B<C]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: J<B
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 4
+    RELATIONS_LIST: [B>J]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [J<B, B<J]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: C<K
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 1
+    RELATIONS_LIST: [K>C]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [K<C, C<K]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: K<F
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 4
+    RELATIONS_LIST: [K<F]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [K<F, F<K]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: K<F
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 2
+    RELATIONS_LIST: [K<F]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [K<F, F<K]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: F<B
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 3
+    RELATIONS_LIST: [B>F]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [B<F, F<B]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: J<D
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 1
+    RELATIONS_LIST: [D>J]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [J<D, D<J]
+    TYPE: trial
+    WAIT: 1
+- experiment_elements:
+  - {INSTRUCTION_TYPE: text, PATH: instrukcja.txt, TIME: 5, TYPE: instruction}
+  - ANSWER: C<G
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 2
+    RELATIONS_LIST: [G>C]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [C<G, G<C]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: H<B
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 1
+    RELATIONS_LIST: [B>H]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [H<B, B<H]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: C<K
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 2
+    RELATIONS_LIST: [C<K]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [C<K, K<C]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: J<F
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 3
+    RELATIONS_LIST: [J<F]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [J<F, F<J]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: B<G
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 3
+    RELATIONS_LIST: [G>B]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [G<B, B<G]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: D<F
+    EEG: 1
+    EXP: 1
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 4
+    RELATIONS_LIST: [F>D]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [D<F, F<D]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: K<D
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 1
+    RELATIONS_LIST: [D>K]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [K<D, D<K]
+    TYPE: trial
+    WAIT: 1
+  - ANSWER: J<H
+    EEG: 1
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1
+    FIXTIME: 1
+    INTEGR: 1
+    LIST_VIEW: 1
+    MAXTIME: 1
+    MEMORY: 1
+    N: 1
+    NR: 4
+    RELATIONS_LIST: [J<H]
+    RESP_TIME: 1
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 1
+    TASK: [J<H, H<J]
+    TYPE: trial
+    WAIT: 1
+NAME: 12M12
