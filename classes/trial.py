@@ -323,7 +323,7 @@ class Trial:
 
         task = [first_task, second_task]
         random.shuffle(task)
-        answer = [first_task]
+        answer = first_task
 
         return task, answer
 
