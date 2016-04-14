@@ -83,7 +83,7 @@ figures = (
 
 
 class Trial:
-    def __init__(self, sample_type, n, nr, memory, integr, show_time, resp_time, maxtime, feedb, feedb_time, wait, exp, fixtime, eeg, view_list):
+    def __init__(self, sample_type, n, nr, memory, integr, show_time, resp_time, maxtime, feedb, feedb_time, wait, exp, fixtime, view_list):
         """
         :param sample_type: kind of stimulus. All possibilities in SampleTypes class.
         :param n: number of relations in trial. n+1 number od elements in relation chain
@@ -105,9 +105,6 @@ class Trial:
         :param exp:
             (exp == 1) => Experiment Trial.
             (exp == 0) => Test Trail.
-        :param eeg:
-            (eeg == 1) => EEG is connected.
-            (eeg == 0) => EEG isn't connected.
         :param view_list:
             (view_list == 1) => Relation under relation - for tablets.
             (view_list == 0) => All relations shown at the same place.
@@ -129,7 +126,6 @@ class Trial:
         self.relations_list = None
         self.task = None
         self.answer = None
-        self.eeg = int(eeg)
         self.view_list = int(view_list)
         self.type = 'trial'
 
@@ -338,13 +334,12 @@ class Trial:
             'INTEGR': self.integr,
             'SHOW_TIME': self.show_time,
             'RESP_TIME': self.resp_time,
-            'MAXTIME': self.maxtime,
+            'MAX_TIME': self.maxtime,
             'FEEDB': self.feedb,
             'FEEDB_TIME': self.feedb_time,
             'WAIT': self.wait,
             'EXP': self.exp,
-            'FIXTIME': self.fixtime,
-            'EEG': self.eeg,
+            'FIX_TIME': self.fixtime,
             'LIST_VIEW': self.view_list
         }
 

@@ -20,7 +20,7 @@ def load_info(filename):
     for row_idx in range(len(sheet.columns[0]) - 1):
         trial = {}
         for column_idx, column in enumerate(sheet.columns):
-            if column_idx == 19:
+            if column_idx == 18:
                 break
             if isinstance(column[row_idx + 1].value, (str, unicode)):
                 trial.update({str(column[0].value): str(column[row_idx + 1].value)})
@@ -51,7 +51,7 @@ def main():
 
     number_of_blocks, data = load_info(args.Experiment_file_name)
 
-    experiment = Experiment([], args.Participant_ID, args.Participant_Sex, args.Participant_Age)
+    experiment = Experiment([], args.Participant_ID, args.Participant_Sex, args.Participant_Age, int(args.EEG_connected))
 
     for idx in range(number_of_blocks):
         block = Block([])
@@ -70,9 +70,9 @@ def main():
             trial = Instruction(trial_info['INSTRUCTION'], instruction_type, trial_info['SHOW_TIME'])
         else:
             trial = Trial(trial_info['SAMPLE_TYPE'], trial_info['N'], trial_info['NR'], trial_info['MEMORY'],
-                          trial_info['INTEGR'], trial_info['SHOW_TIME'], trial_info['RESP_TIME'], trial_info['MAXTIME'],
+                          trial_info['INTEGR'], trial_info['SHOW_TIME'], trial_info['RESP_TIME'], trial_info['MAX_TIME'],
                           trial_info['FEEDB'], trial_info['FEEDB_TIME'], trial_info['WAIT'], trial_info['EXP'],
-                          trial_info['FIXTIME'], trial_info['EEG'], trial_info['LIST_VIEW'])
+                          trial_info['FIX_TIME'], trial_info['LIST_VIEW'])
             trial.create_sample()
         experiment.list_of_blocks[block_number - 1].list_of_trials.append(trial)
 

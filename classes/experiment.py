@@ -2,9 +2,10 @@ import yaml
 
 
 class Experiment:
-    def __init__(self, list_of_blocks, id, sex, age):
+    def __init__(self, list_of_blocks, id, sex, age, eeg):
         self.name = str(id) + sex + str(age)
         self.list_of_blocks = list_of_blocks
+        self.eeg = eeg
 
     def prepare_concrete(self):
         elements_list = []
@@ -12,7 +13,8 @@ class Experiment:
             elements_list.append(element.prepare_concrete())
         info = {
             "NAME": self.name,
-            "LIST_OF_BLOCKS": elements_list
+            "LIST_OF_BLOCKS": elements_list,
+            "EEG": self.eeg
         }
         return info
 
