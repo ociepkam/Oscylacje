@@ -1,295 +1,977 @@
 EEG: 1
 LIST_OF_BLOCKS:
 - experiment_elements:
-  - {INSTRUCTION_TYPE: text, PATH: instrukcja.txt, TIME: 5, TYPE: instruction}
-  - ANSWER: G<K
+  - {INSTRUCTION_TYPE: text, PATH: instrukcja.txt, TIME: 0, TYPE: instruction}
+  - ANSWER: C<H
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
+    N: 3
+    NR: 17
+    RELATIONS_LIST: [C<G, K>G, H>K]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [H<C, C<H]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: J<K
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1000
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
     NR: 3
-    RELATIONS_LIST: [G<K]
-    RESP_TIME: 1
+    RELATIONS_LIST: [D>J, H>D, K>H]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [G<K, K<G]
+    SHOW_TIME: 3000
+    TASK: [J<K, K<J]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: D<B
-    EXP: 0
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    WAIT: 0
+  - ANSWER: H<F
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
+    N: 3
+    NR: 50
+    RELATIONS_LIST: [K>H, B>K, F>B]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [H<F, F<H]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: D<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 37
+    RELATIONS_LIST: [D<B, B<G, C>G]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [D<C, C<D]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: C<G
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
     NR: 3
-    RELATIONS_LIST: [D<B]
-    RESP_TIME: 1
+    RELATIONS_LIST: [C<H, F>H, F<G]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [B<D, D<B]
+    SHOW_TIME: 3000
+    TASK: [G<C, C<G]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: F<C
-    EXP: 0
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
-    INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
-    MEMORY: 1
-    N: 1
-    NR: 2
-    RELATIONS_LIST: [F<C]
-    RESP_TIME: 1
-    SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [C<F, F<C]
-    TYPE: trial
-    WAIT: 1
-  - ANSWER: D<J
-    EXP: 0
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
-    INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
-    MEMORY: 1
-    N: 1
-    NR: 4
-    RELATIONS_LIST: [J>D]
-    RESP_TIME: 1
-    SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [J<D, D<J]
-    TYPE: trial
-    WAIT: 1
-  - ANSWER: D<J
-    EXP: 0
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
-    INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
-    MEMORY: 1
-    N: 1
-    NR: 1
-    RELATIONS_LIST: [J>D]
-    RESP_TIME: 1
-    SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [J<D, D<J]
-    TYPE: trial
-    WAIT: 1
-  - ANSWER: C<B
+    WAIT: 0
+  - ANSWER: G<D
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 2
-    RELATIONS_LIST: [B>C]
-    RESP_TIME: 1
+    N: 3
+    NR: 44
+    RELATIONS_LIST: [K>G, K<B, B<D]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [B<C, C<B]
+    SHOW_TIME: 3000
+    TASK: [G<D, D<G]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: B<F
+    WAIT: 0
+  - ANSWER: C<K
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 1
-    RELATIONS_LIST: [F>B]
-    RESP_TIME: 1
+    N: 3
+    NR: 47
+    RELATIONS_LIST: [F>C, F<G, G<K]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [B<F, F<B]
+    SHOW_TIME: 3000
+    TASK: [K<C, C<K]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: J<H
+    WAIT: 0
+  - ANSWER: K<C
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 4
-    RELATIONS_LIST: [H>J]
-    RESP_TIME: 1
+    N: 3
+    NR: 5
+    RELATIONS_LIST: [K<F, D>F, C>D]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [H<J, J<H]
+    SHOW_TIME: 3000
+    TASK: [K<C, C<K]
     TYPE: trial
-    WAIT: 1
-- experiment_elements:
-  - {INSTRUCTION_TYPE: text, PATH: instrukcja.txt, TIME: 5, TYPE: instruction}
-  - ANSWER: B<G
-    EXP: 0
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    WAIT: 0
+  - ANSWER: K<B
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 3
-    RELATIONS_LIST: [B<G]
-    RESP_TIME: 1
+    N: 3
+    NR: 27
+    RELATIONS_LIST: [K<D, D<J, B>J]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [B<G, G<B]
+    SHOW_TIME: 3000
+    TASK: [B<K, K<B]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: G<J
-    EXP: 0
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    WAIT: 0
+  - ANSWER: K<D
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 2
-    RELATIONS_LIST: [G<J]
-    RESP_TIME: 1
+    N: 3
+    NR: 7
+    RELATIONS_LIST: [K<C, C<B, B<D]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [J<G, G<J]
+    SHOW_TIME: 3000
+    TASK: [K<D, D<K]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: F<G
-    EXP: 0
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    WAIT: 0
+  - ANSWER: K<D
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 1
-    RELATIONS_LIST: [G>F]
-    RESP_TIME: 1
+    N: 3
+    NR: 22
+    RELATIONS_LIST: [K<F, G>F, D>G]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [G<F, F<G]
+    SHOW_TIME: 3000
+    TASK: [K<D, D<K]
     TYPE: trial
-    WAIT: 1
+    WAIT: 0
+  - ANSWER: H<G
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 8
+    RELATIONS_LIST: [H<J, D>J, D<G]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [H<G, G<H]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: C<H
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 21
+    RELATIONS_LIST: [F>C, K>F, H>K]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [C<H, H<C]
+    TYPE: trial
+    WAIT: 0
   - ANSWER: G<F
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 4
-    RELATIONS_LIST: [F>G]
-    RESP_TIME: 1
+    N: 3
+    NR: 15
+    RELATIONS_LIST: [K>G, K<C, F>C]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [F<G, G<F]
+    SHOW_TIME: 3000
+    TASK: [G<F, F<G]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: D<H
+    WAIT: 0
+  - ANSWER: D<F
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 1
-    RELATIONS_LIST: [H>D]
-    RESP_TIME: 1
+    N: 3
+    NR: 24
+    RELATIONS_LIST: [D<H, H<B, F>B]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
-    TASK: [H<D, D<H]
+    SHOW_TIME: 3000
+    TASK: [F<D, D<F]
     TYPE: trial
-    WAIT: 1
+    WAIT: 0
   - ANSWER: D<J
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 3
-    RELATIONS_LIST: [J>D]
-    RESP_TIME: 1
+    N: 3
+    NR: 40
+    RELATIONS_LIST: [D<C, B>C, J>B]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
+    SHOW_TIME: 3000
     TASK: [D<J, J<D]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: C<J
+    WAIT: 0
+  - ANSWER: B<H
     EXP: 1
-    FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
-    NR: 2
-    RELATIONS_LIST: [J>C]
-    RESP_TIME: 1
+    N: 3
+    NR: 33
+    RELATIONS_LIST: [B<C, C<D, H>D]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
+    SHOW_TIME: 3000
+    TASK: [B<H, H<B]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: H<B
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 31
+    RELATIONS_LIST: [C>H, J>C, B>J]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [H<B, B<H]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: G<D
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 19
+    RELATIONS_LIST: [F>G, F<H, H<D]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [G<D, D<G]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: J<H
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 16
+    RELATIONS_LIST: [B>J, G>B, G<H]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [J<H, H<J]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: K<H
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 30
+    RELATIONS_LIST: [K<C, C<D, H>D]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [H<K, K<H]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: J<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 9
+    RELATIONS_LIST: [H>J, K>H, K<C]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
     TASK: [J<C, C<J]
     TYPE: trial
-    WAIT: 1
-  - ANSWER: C<F
+    WAIT: 0
+  - ANSWER: G<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 46
+    RELATIONS_LIST: [G<B, F>B, C>F]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [G<C, C<G]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: J<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 34
+    RELATIONS_LIST: [J<D, H>D, H<C]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [J<C, C<J]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: C<J
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 28
+    RELATIONS_LIST: [F>C, B>F, B<J]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [J<C, C<J]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: B<D
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 25
+    RELATIONS_LIST: [B<H, H<G, G<D]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [D<B, B<D]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: K<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 23
+    RELATIONS_LIST: [J>K, F>J, F<C]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [K<C, C<K]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: H<J
     EXP: 0
     FEEDB: 1
-    FEEDB_TIME: 1
-    FIX_TIME: 1
+    FEEDB_TIME: 1000
+    FIX_TIME: 500
     INTEGR: 1
-    LIST_VIEW: 1
-    MAX_TIME: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
     MEMORY: 1
-    N: 1
+    N: 3
     NR: 4
-    RELATIONS_LIST: [F>C]
-    RESP_TIME: 1
+    RELATIONS_LIST: [H<D, K>D, J>K]
+    RESP_TIME: 0
     SAMPLE_TYPE: letters
-    SHOW_TIME: 1
+    SHOW_TIME: 3000
+    TASK: [J<H, H<J]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: J<K
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1000
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 1
+    RELATIONS_LIST: [J<G, H>G, H<K]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [J<K, K<J]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: K<B
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 42
+    RELATIONS_LIST: [K<J, J<D, B>D]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [K<B, B<K]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: C<G
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 12
+    RELATIONS_LIST: [C<K, F>K, F<G]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [G<C, C<G]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: J<G
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 14
+    RELATIONS_LIST: [J<F, F<C, C<G]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [G<J, J<G]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: B<H
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 1
+    RELATIONS_LIST: [B<G, D>G, H>D]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [H<B, B<H]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: C<F
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 48
+    RELATIONS_LIST: [C<J, J<D, F>D]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [C<F, F<C]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: D<K
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 39
+    RELATIONS_LIST: [C>D, C<F, K>F]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [K<D, D<K]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: D<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 20
+    RELATIONS_LIST: [D<J, J<B, B<C]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [C<D, D<C]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: D<G
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 13
+    RELATIONS_LIST: [D<F, H>F, G>H]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [D<G, G<D]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: F<J
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 45
+    RELATIONS_LIST: [F<K, K<B, B<J]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [F<J, J<F]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: B<G
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 41
+    RELATIONS_LIST: [F>B, K>F, K<G]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [B<G, G<B]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: C<H
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 38
+    RELATIONS_LIST: [C<D, D<F, F<H]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [C<H, H<C]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: K<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 43
+    RELATIONS_LIST: [D>K, G>D, G<C]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [C<K, K<C]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: G<D
+    EXP: 0
+    FEEDB: 1
+    FEEDB_TIME: 1000
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 2
+    RELATIONS_LIST: [G<F, K>F, K<D]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [D<G, G<D]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: H<F
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 11
+    RELATIONS_LIST: [H<B, B<J, F>J]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [F<H, H<F]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: D<F
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 18
+    RELATIONS_LIST: [D<B, B<J, F>J]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [F<D, D<F]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: K<F
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 26
+    RELATIONS_LIST: [D>K, D<C, C<F]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [F<K, K<F]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: D<B
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 2
+    RELATIONS_LIST: [D<C, H>C, B>H]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [D<B, B<D]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: F<C
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 10
+    RELATIONS_LIST: [J>F, K>J, C>K]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
     TASK: [F<C, C<F]
     TYPE: trial
-    WAIT: 1
+    WAIT: 0
+  - ANSWER: B<J
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 49
+    RELATIONS_LIST: [B<H, H<K, J>K]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [B<J, J<B]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: C<B
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 32
+    RELATIONS_LIST: [C<K, D>K, D<B]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [B<C, C<B]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: H<B
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 29
+    RELATIONS_LIST: [D>H, K>D, K<B]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [B<H, H<B]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: H<J
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 4
+    RELATIONS_LIST: [G>H, B>G, B<J]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [H<J, J<H]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: J<B
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 36
+    RELATIONS_LIST: [K>J, D>K, D<B]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [B<J, J<B]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: F<G
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 35
+    RELATIONS_LIST: [C>F, B>C, B<G]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [F<G, G<F]
+    TYPE: trial
+    WAIT: 0
+  - ANSWER: D<J
+    EXP: 1
+    FEEDB: 0
+    FEEDB_TIME: 0
+    FIX_TIME: 500
+    INTEGR: 1
+    LIST_VIEW: 0
+    MAX_TIME: 12000
+    MEMORY: 1
+    N: 3
+    NR: 6
+    RELATIONS_LIST: [D<C, C<F, F<J]
+    RESP_TIME: 0
+    SAMPLE_TYPE: letters
+    SHOW_TIME: 3000
+    TASK: [J<D, D<J]
+    TYPE: trial
+    WAIT: 0
 NAME: 12M12
